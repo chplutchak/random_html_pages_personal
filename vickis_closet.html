@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicki's Vegas Closet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #f8f5f0 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            color: #2d2d2d;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 3px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+        
+        .stats {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .stats div {
+            display: inline-block;
+            margin: 0 30px;
+        }
+        
+        .stats span {
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+            color: #c9a690;
+        }
+        
+        .stats label {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .item-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .item-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+        
+        .item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .item-details {
+            padding: 25px;
+        }
+        
+        .item-name {
+            font-size: 1.3em;
+            color: #2d2d2d;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        
+        .item-description {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .item-price {
+            font-size: 1.5em;
+            color: #c9a690;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .item-link {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #2d2d2d;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .item-link:hover {
+            background: #c9a690;
+        }
+        
+        .sale-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .catalog {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats div {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>VEGAS INSPO</h1>
+        <p>A curated collection of pieces that would look great in VEGAS✨</p>
+    </div>
+    
+    <div class="stats">
+        <div>
+            <span>12</span>
+            <label>Items</label>
+        </div>
+        <div>
+            <span>$610.93</span>
+            <label>Total Value</label>
+        </div>
+    </div>
+    
+    <div class="catalog">
+        <!-- Item 1 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/09-11-24_S4_14_PTA7270_Olive_KJ_SS_11-15-13_64430_PXF_TT.jpg?v=1726174736&width=600&height=900&crop=center" alt="Eliana High Neck Top" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <div class="sale-badge">SALE</div>
+                <h2 class="item-name">Eliana High Neck Top - Olive</h2>
+                <p class="item-description">Olive green sleeveless high neck top</p>
+                <div class="item-price">$16.99 <span style="text-decoration: line-through; color: #999; font-size: 0.7em;">$24.99</span></div>
+                <a href="https://www.fashionnova.com/products/eliana-high-neck-top-olive" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/09-18-23Studio4_TK_AC_11-36-41_16_37350_Black_2058_PLUS_MP.jpg?v=1750602923&width=600&height=900&crop=center" alt="Kourtney Faux Leather Bodysuit" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <div class="sale-badge">SALE</div>
+                <h2 class="item-name">Kourtney Faux Leather Bodysuit - Black</h2>
+                <p class="item-description">Black faux leather sleeveless bodysuit</p>
+                <div class="item-price">$20.99 <span style="text-decoration: line-through; color: #999; font-size: 0.7em;">$29.99</span></div>
+                <a href="https://www.fashionnova.com/products/kourtney-faux-leather-bodysuit-black" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        <!-- Item 3 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/12-03-24_S4_8_D1997FN_Black_RA_SS_10-18-54_PLUS_104186_PXF.jpg?v=1734460651&width=600&height=900&crop=center" alt="Jada Faux Leather Top" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <div class="sale-badge">SALE</div>
+                <h2 class="item-name">Jada Faux Leather Top - Black</h2>
+                <p class="item-description">Black faux leather strapless top</p>
+                <div class="item-price">$16.99 <span style="text-decoration: line-through; color: #999; font-size: 0.7em;">$24.99</span></div>
+                <a href="https://www.fashionnova.com/products/jada-faux-leather-top-black" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        <!-- Item 4 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/05-23-25_S6_26_KT6777C_Brown_RA_PLUS_MC_12-42-43_86664_PXF.jpg?v=1748981063&width=600&height=900&crop=center" alt="Power Mesh Corset Top" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <div class="sale-badge">SALE</div>
+                <h2 class="item-name">Power Mesh Corset Top - Brown</h2>
+                <p class="item-description">Brown mesh strapless corset top</p>
+                <div class="item-price">$27.99 <span style="text-decoration: line-through; color: #999; font-size: 0.7em;">$39.99</span></div>
+                <a href="https://www.fashionnova.com/products/power-mesh-corset-top-brown" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        <!-- Item 5 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/06-06-24_S8_44_RABBAN_Black_ID_SS_14-41-20_88149_PXF.jpg?v=1721257769&width=600&height=900&crop=center" alt="Honey Kitten Heels" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <div class="sale-badge">SALE</div>
+                <h2 class="item-name">Honey Kitten Heels - Black</h2>
+                <p class="item-description">Black kitten heel sandals with bow detail</p>
+                <div class="item-price">$20.99 <span style="text-decoration: line-through; color: #999; font-size: 0.7em;">$29.99</span></div>
+                <a href="https://www.fashionnova.com/products/honey-kitten-heels-black" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        <!-- Item 6 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/02-22-25_S8_58_BERMUDA30_Black_RA_SP_12-39-36_48863_PXF.jpg?v=1740621036&width=600&height=900&crop=center" alt="Only Have Eyes For You Heeled Mules" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <div class="sale-badge">SALE</div>
+                <h2 class="item-name">Only Have Eyes For You Heeled Mules - Black</h2>
+                <p class="item-description">Black heeled mules</p>
+                <div class="item-price">$27.99 <span style="text-decoration: line-through; color: #999; font-size: 0.7em;">$39.99</span></div>
+                <a href="https://www.fashionnova.com/products/only-have-eyes-for-you-heeled-mules-black" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        <!-- Item 7 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://bananarepublic.gap.com/webcontent/0059/984/076/cn59984076.jpg" alt="Stretch Satin Tie-Neck Top" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <h2 class="item-name">Stretch Satin Tie-Neck Top - Ganache Brown</h2>
+                <p class="item-description">Satin tie-neck sleeveless top</p>
+                <div class="item-price">$120.00</div>
+                <a href="https://bananarepublic.gap.com/browse/product.do?pid=826114012" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        <!-- Item 8 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://www.lulus.com/images/product/xlarge/2694131_02_front_2025-07-22.jpg?w=560" alt="Nikora Black Ponte Knit Strapless Top" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <div class="sale-badge">SALE</div>
+                <h2 class="item-name">Nikora Black Ponte Knit Strapless Top</h2>
+                <p class="item-description">Black strapless ponte knit top</p>
+                <div class="item-price">$31.00 <span style="text-decoration: line-through; color: #999; font-size: 0.7em;">$39.00</span></div>
+                <a href="https://www.lulus.com/products/mikora-black-ponte-knit-strapless-top/2694131.html" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        <!-- Item 9 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://us.princesspolly.com/cdn/shop/files/0-modelinfo-elly-us2_f618b10e-5f76-4d33-bc7f-3470042a223b.jpg?v=1725323633&width=1800" alt="Anse Mini Dress Black" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <h2 class="item-name">Anse Mini Dress Black</h2>
+                <p class="item-description">Black sleeveless mini dress - This doesn't look as short on, I looked at some of the review photos!</p>
+                <div class="item-price">$75.00</div>
+                <a href="https://us.princesspolly.com/products/anse-mini-dress-black" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        <!-- Item 10 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://us.princesspolly.com/cdn/shop/files/1-modelinfo-serena-us2_e7b2c04c-e331-4569-8946-77862129164b.jpg?v=1726794205&width=1800" alt="Baudelaire Strapless Corset Black" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <h2 class="item-name">Baudelaire Strapless Corset Black</h2>
+                <p class="item-description">Black strapless corset top</p>
+                <div class="item-price">$55.00</div>
+                <a href="https://us.princesspolly.com/products/baudelaire-strapless-corset-black" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        <!-- Item 11 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://perfectcorsetny.com/cdn/shop/files/14_85a9eb4c-663a-4b99-b2d7-a5b6583e50e9.png?v=1759141578&width=760" alt="Florence Corset" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <h2 class="item-name">Florence Corset - Black</h2>
+                <p class="item-description">Black lace-up strapless corset</p>
+                <div class="item-price">$79.99</div>
+                <a href="https://perfectcorsetny.com/products/florence-artistic-corset?variant=51465093349665" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="item-card">
+            <div class="item-image">
+                <img src="https://www.thistleandspire.com/cdn/shop/files/Untitleddesign_013fd65d-c23a-4146-856a-0f6d7361da21.png?v=1709871076&width=960" alt="Florence Corset" onerror="this.parentElement.innerHTML='Add Image URL'">
+            </div>
+            <div class="item-details">
+                <h2 class="item-name">Dripping in Jewels Bodysuit</h2>
+                <p class="item-description">Sparkling effervescent opulence with crystals over nude mesh</p>
+                <p class="item-description">WILD CARD! But super cute and they also cell nude nipple covers - Would look perfect for the Sphere!</p>
+                <div class="item-price">$118.00</div>
+                <a href="https://www.thistleandspire.com/collections/bodysuits/products/dripping-in-jewels-bodysuit-available-in-2-nudes" class="item-link" target="_blank">View Item</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
